@@ -1,0 +1,13 @@
+version: 5
+
+hierarchy:
+  - name: "Target specific data"
+    path: "targets/%{trusted.certname}.yaml"
+  - name: "Per-OS defaults"
+    path: "os/%{facts.os.family}.yaml"
+  - name: Common
+    path: common.yaml
+
+plan_hierarchy:
+  - name: Common
+    path: common.yaml

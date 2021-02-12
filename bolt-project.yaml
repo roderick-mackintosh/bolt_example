@@ -1,0 +1,8 @@
+---
+name: k8s_ubuntu
+log:
+  bolt-debug.log: disable
+plans:
+  - k8s_ubuntu::provision
+  - k8s_ubuntu::destroy
+  - k8s_ubuntu::plan_lookup

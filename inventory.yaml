@@ -1,0 +1,14 @@
+---
+groups:
+  - name: master
+    targets:
+    - k8s-master
+  - name: worker
+    targets:
+    - k8s-worker-1
+    - k8s-worker-2
+config:
+  ssh:
+    host-key-check: false
+    private-key: ~/.ssh/google_compute_engine
+    run-as: root
