@@ -1,14 +1,16 @@
 ---
 groups:
-  - name: master
+  - name: prod
     targets:
-    - k8s-master
-  - name: worker
+    - node1prod
+  - name: qa
     targets:
-    - k8s-worker-1
-    - k8s-worker-2
+    - node2qa
+  - name: dev
+    targets:
+    - node3dev
 config:
   ssh:
     host-key-check: false
-    private-key: ~/.ssh/google_compute_engine
+    private-key: ~/.ssh/id_rsa
     run-as: root

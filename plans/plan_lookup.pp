@@ -1,4 +1,4 @@
-plan k8s_ubuntu::plan_lookup(
+plan bolt_example::plan_lookup(
   TargetSpec $targets
 ) {
   apply('localhost') {

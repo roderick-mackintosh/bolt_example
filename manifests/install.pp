@@ -1,5 +1,5 @@
 # Class documentation
-class k8s_ubuntu::install {
+class bolt_example::install {
 
   include apt
 

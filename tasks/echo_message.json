@@ -1,0 +1,9 @@
+{
+    "description": "This task echoes a message",
+    "parameters": {
+      "message": {
+        "description": "The message to echo",
+        "type": "String[1]"
+      }
+    }
+  }

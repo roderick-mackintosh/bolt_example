@@ -1,11 +1,12 @@
-plan k8s_ubuntu::plan_newfile(
-  TargetSpec $targets
+plan bolt_example::plan_newfile(
+  TargetSpec $targets,
+  Optional[String[1]] $path = '/tmp'
 ) {
   apply($targets) {
     $message = lookup('message')
-    file { '~/Documents/github/bolt-k8s/ubuntu/file.txt':
+    file { "${path}/bolt_example.txt":
       ensure  => file,
-      content => template('k8s_ubuntu/file.txt.erb')
+      content => template('bolt_example/file.txt.erb')
     }
   }
 }
